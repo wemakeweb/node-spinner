@@ -1,5 +1,7 @@
+var extend = require('util-extend');
+
 // Spinner types.
-var spinners = {
+extend(Spinner, {
 	Box1    : '⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏',
 	Box2    : '⠋⠙⠚⠞⠖⠦⠴⠲⠳⠓',
 	Box3    : '⠄⠆⠇⠋⠙⠸⠰⠠⠰⠸⠙⠋⠇⠆',
@@ -16,14 +18,14 @@ var spinners = {
 	Spin7   : '╫╪',
 	Spin8   : '■□▪▫',
 	Spin9   : '←↑→↓'
-}
+});
 
 // Spinner.
 function Spinner(){
 	this.frames = [];
 	this.length = 0;
 	this.pos = 0;
-};
+}
 
 // Set frames to the given string which must not use spaces.
 Spinner.prototype.set = function(frames){
@@ -43,9 +45,9 @@ Spinner.prototype.reset = function(){
 	this.pos = 0
 }
 
-// New returns a spinner initialized with Default frames.
+// Returns a spinner initialized with Default frames.
 module.exports = function(){
 	var s = new Spinner();
-	s.set(spinners.Box1);
+	s.set(Spinner.Box1);
 	return s
-};
+}
