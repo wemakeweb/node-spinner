@@ -1,6 +1,6 @@
 {
   "name": "node-spinner",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple Spinner for the Terminal.",
   "main": "index.js",
   "scripts": {
