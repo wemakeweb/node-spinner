@@ -15,7 +15,7 @@ $ npm install node-spinner
 var s = Spinner();
 
 setInterval(function(){
-	console.log("\r  \033[36mcomputing\033[m %s ", s.next())
+	process.stdout.write('\r \033[36mcomputing\033[m ' + s.next());
 }, 250);
 ```
 
