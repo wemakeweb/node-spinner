@@ -3,6 +3,7 @@
   "version": "0.0.4",
   "description": "Simple Spinner for the Terminal.",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
